@@ -2,7 +2,7 @@ import React from 'react';
 import img from './../../../styles/img/skills/cba4c53d31f0995a0d88fc09779eea46.jpg';
 
 
-const Skills = () => {
+const Description = () => {
     return (
         <div className="description">
     <div className="description__left">
@@ -47,4 +47,4 @@ const Skills = () => {
     )
 }
 
-export default Skills
+export default Description

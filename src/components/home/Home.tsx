@@ -1,20 +1,20 @@
 import React from 'react'
-import FirstBlock from '../blocks/FirstBlock'
-import SecondBlock from '../blocks/SecondBlock'
 import Offer from '../blocks/offer/Offer'
-import Skills from '../blocks/skills/Skills'
 import Result from '../table/Result'
 import Team from '../blocks/team/Team'
+import FirstScreen from '../blocks/FirstScreen'
+import Description from '../blocks/description/Description'
+import Skills from '../blocks/Skills'
 
 const Home = () => {
     return (
         <div className='home'>
-            <FirstBlock>
+            <FirstScreen>
                 <Offer />
                 <Result />
-            </FirstBlock>
-            <SecondBlock/>
+            </FirstScreen>
             <Skills/>
+            <Description/>
             <Team/>
         </div>
     )

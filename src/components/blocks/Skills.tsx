@@ -1,7 +1,7 @@
 import React from 'react';
 import icon from './../../styles/img/check_24px.png';
 
-const SecondBlock = () => {
+const Skills = () => {
     return (
         <div className='skills'>
             <h3 className="skills__title">
@@ -57,5 +57,5 @@ const SecondBlock = () => {
     )
 }
 
-export default SecondBlock
+export default Skills;
 

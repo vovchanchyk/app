@@ -1,14 +1,14 @@
 import React from 'react';
-import FirstBlock from '../blocks/FirstBlock';
+import FirstScreen from '../blocks/FirstScreen';
 import FormComponent from '../form/FormComponent';
 
 
 const Login = () => {
     return (
         <div>
-            <FirstBlock>
+            <FirstScreen>
             <FormComponent/>
-            </FirstBlock>
+            </FirstScreen>
             
         </div>
     )

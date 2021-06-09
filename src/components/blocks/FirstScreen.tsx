@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FirstBlock:React.FC = ({children}) => {
+const FirstScreen:React.FC = ({children}) => {
     return (
         <div className='firstblock'>
             <div className="firstblock__img">
@@ -12,4 +12,5 @@ const FirstBlock:React.FC = ({children}) => {
     )
 }
 
-export default FirstBlock
+export default FirstScreen;
+

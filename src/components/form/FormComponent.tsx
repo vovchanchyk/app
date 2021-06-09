@@ -44,10 +44,6 @@ const FormComponent = () => {
         alert(`dear ${values.name} your data have sent`)
 
     };
-
-
-
-
     return (
         <div className="form">
             <Formik className=""
@@ -65,10 +61,6 @@ const FormComponent = () => {
 
             </Formik>
         </div>
-
-
-
-
     )
 }
 

@@ -1,8 +1,8 @@
 @import "./zero.scss";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
-$orange : rgba(255, 191, 43, 1);
-$blue : rgba(43, 125, 247, 1);
+$orange: rgba(255, 191, 43, 1);
+$blue: rgba(43, 125, 247, 1);
 
 .app {
   max-width: 100%;
@@ -21,7 +21,7 @@ $blue : rgba(43, 125, 247, 1);
   color: white;
 }
 
-%btn{
+%btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,63 +29,76 @@ $blue : rgba(43, 125, 247, 1);
   width: 110px;
   height: 55px;
   font-weight: 600;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     width: 80%;
     margin-left: 0;
   }
- 
 }
+
+
+
+
+
+
+
+
 .header {
   padding: 10px 180px;
   background-color: $blue;
   display: flex;
   justify-content: space-between;
   min-height: 55px;
+  &__brand{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 55px;
+  }
+
+
+  &__logo {
+    max-height: 35px;
+  }
+
+  &__logo-txt {
+    color: white;
+    margin-left: 5px;
+  }
+  &__burger {
+    display: none;
+    background-color: transparent;
+  }
+  &__nav {
+    display: flex;
+  }
+
+
+
 }
-.header__brand {
-  padding: 0;
-  display: flex;
-  align-items: center;
-  height: 55px;
-}
-.header__logo {
-  max-height: 35px;
-}
+
+
 .header__logo-txt {
   color: white;
   margin-left: 5px;
 }
 .header__burger {
   display: none;
-  background-color: transparent; 
+  background-color: transparent;
 }
 .header__nav {
   display: flex;
 }
-.btn {
- @extend %btn;
- color: $orange;
- border: none;
-  &:hover{
-    border: solid 2px ;
-  }
-  
-  &--active {
-    @extend %btn;
-    color: white;
-    background-color: $orange;
-  }
-}
 
 
+//first block =========
 .firstblock {
   height: 600px;
   min-width: 350px;
-  background-color: $blue;
+  background-color: $orange;
 
   &__img {
     height: calc(100% - 10px);
-    background-image: url('./img/c3a10436475a8972b35974e832bc3ced\ \(1\).png');
+    background-image: url("./img/c3a10436475a8972b35974e832bc3ced\ \(1\).png");
     background-color: rgba(44, 125, 247, 0.67);
     border-bottom-right-radius: 100% 40px;
     border-bottom-left-radius: 100% 40px;
@@ -103,7 +116,7 @@ $blue : rgba(43, 125, 247, 1);
     padding: 0 180px;
   }
 }
-
+//table=========
 .table {
   padding: 20px 20px;
   height: auto;
@@ -128,15 +141,14 @@ $blue : rgba(43, 125, 247, 1);
     font-weight: 500;
   }
 }
+//offer=========
 .offer {
   color: white;
   padding-right: 50px;
   width: 350px;
-  
 
   &__brand {
     width: 350px;
-
   }
 
   &__title {
@@ -149,9 +161,18 @@ $blue : rgba(43, 125, 247, 1);
     line-height: 32px;
   }
 }
+//form =========
+
 .form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+
   &__body {
-    background: #ecf4ff;
+    width: 50%;
+    max-width: 450px;
+    background: #ecf4ff; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,26 +184,17 @@ $blue : rgba(43, 125, 247, 1);
     justify-content: center;
   }
 
-  &__btn{
+  &__btn {
     @extend .btn--active;
-    &:hover{
+    &:hover {
       background-color: transparent;
-      color:rgba(255, 191, 43, 1) ;
+      color: rgba(255, 191, 43, 1);
       border: solid;
     }
-    
   }
-}
 
-.form {
-  width: 100%;
-  display: flex;
-  justify-content: center;
 
-  &__body {
-    width: 50%;
-    max-width: 450px;
-  }
+
   &__title {
     margin-bottom: 20px;
   }
@@ -277,11 +289,15 @@ $blue : rgba(43, 125, 247, 1);
   &__copyright {
     color: white;
   }
+  &__text{
+    margin-left: 10px;
+  }
 }
 
-.text {
-  margin-left: 10px;
-}
+
+
+
+
 .skills {
   width: 100%;
 
@@ -332,7 +348,6 @@ $blue : rgba(43, 125, 247, 1);
     align-items: center;
   }
 
- 
   &__circle {
     width: 500px;
     display: flex;
@@ -367,11 +382,15 @@ $blue : rgba(43, 125, 247, 1);
     padding-bottom: 15px;
   }
 }
+
+
+
+
 .description {
   margin: auto;
   width: 90%;
   display: flex;
-  height: 430px;  
+  height: 430px;
   font-family: "open sans";
   justify-content: space-between;
 
@@ -380,7 +399,7 @@ $blue : rgba(43, 125, 247, 1);
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: flex-start;
     height: 100%;
     height: auto;
@@ -434,9 +453,12 @@ $blue : rgba(43, 125, 247, 1);
   &__img {
     width: 530px;
     height: 380px;
-
   }
 }
+
+
+
+
 .team {
   width: 90%;
   max-width: 1100px;
@@ -483,14 +505,12 @@ $blue : rgba(43, 125, 247, 1);
   }
 }
 
-
-.error{
+.error {
   color: white;
   font-weight: 700;
   font-size: 36px;
 }
 
-
-// @import "./burgersqreen768.scss";
- @import "./sqreen1100.scss";
+@import "./btn.scss";
+@import "./sqreen1100.scss";
 @import "./sqreen768.scss";

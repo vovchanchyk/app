@@ -1,29 +1,16 @@
 import React from 'react'
 import NavBtn from '../bttns/NavBtn'
 import icon from './../../styles/img/Vector.png';
-import { useHistory } from 'react-router';
-import { useLocation } from 'react-router-dom';
+
 
 const Footer = () => {
 
-    const location =  useLocation()
-    const history = useHistory()
-
-    const handler = (path :string) => {
-        console.log(location)
-        
-        
-        history.push(path)
-
-    }
-
-
-    return (
+      return (
         <div className="footer">
         <div className="footer__left left">
             <div className="footer__logo">
                 <img src={icon} alt="" />
-                <span className="text">Tezos4all</span>
+                <span className="footer__text">Tezos4all</span>
             </div>
             <div className="footer__columns" >
                 <div className="footer__column">

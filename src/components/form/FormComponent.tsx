@@ -53,9 +53,9 @@ const FormComponent = () => {
             >
                 <Form className='form__body'>
                     <h3 className="form__title">Login</h3>
-                    <Input name="email" label="Email" />
-                    <Input name="password" label="Password" />
-                    <Input name="confirm" label="Password comfirm" />
+                    <Input type='text' name="email" label="Email" />
+                    <Input type='password' name="password" label="Password" />
+                    <Input type='password' name="confirm" label="Password comfirm" />
                     <input className="form__btn" type="submit" value="Submit" />
                 </Form>
 

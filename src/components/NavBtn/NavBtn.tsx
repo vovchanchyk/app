@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { useHistory } from 'react-router';
+import { useLocation, useHistory } from 'react-router-dom';
+
 import styles from './NavBtn.module.scss';
 
 type TLink = {

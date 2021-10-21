@@ -1,24 +1,18 @@
-import {FETCH, NOFETCH} from "../types";
-
-
-
+import { FETCH, NOFETCH } from '../types';
 
 export type TFetchAction = {
-    type:string;
-   
-}
+  type: string;
+};
 
+function fetchReducer(state = true, action: TFetchAction) {
+  if (action.type === FETCH) {
+    return true;
+  }
+  if (action.type === NOFETCH) {
+    return false;
+  }
 
-function fetchReducer(state = true,action:TFetchAction) {
-   if(action.type === FETCH ){
-       
-       return true
-   }else if(action.type === NOFETCH){
-       return false
-   }
-   
-    return state;
-
+  return state;
 }
 
 export default fetchReducer;

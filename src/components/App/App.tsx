@@ -1,25 +1,25 @@
 import React from 'react';
-import './../../styles/App.scss';
-import { Header }  from '../Header';
+import '../../styles/App.scss';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Header } from '../Header';
 import store from '../../store/store';
 
-import { BrowserRouter as Router} from "react-router-dom";
-import {Main} from '../Main';
-import {Footer} from '../Footer';
+import { Main } from '../Main';
+import { Footer } from '../Footer';
 
 function App() {
   return (
-    <Provider store = {store}>
+    <Provider store={store}>
       <Router>
-    <div className="app">
-      <Header/>
-       <Main/>
-       <Footer/>
-    </div>
-    </Router>
+        <div className='app'>
+          <Header />
+          <Main />
+          <Footer />
+        </div>
+      </Router>
     </Provider>
   );
 }
 
-export {App};
+export { App };

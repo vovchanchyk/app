@@ -1,22 +1,15 @@
-import { ERROR } from "../types";
-
-
-
+import { ERROR } from '../types';
 
 export type TErrorAction = {
-    type:string;
-   
-}
+  type: string;
+};
 
+function errorReducer(state = false, action: TErrorAction) {
+  if (action.type === ERROR) {
+    return true;
+  }
 
-function errorReducer(state = false,action:TErrorAction) {
-   if(action.type === ERROR ){
-       
-       return true
-   }
-   
-    return state;
-
+  return state;
 }
 
 export default errorReducer;

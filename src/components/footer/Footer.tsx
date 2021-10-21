@@ -1,54 +1,52 @@
-import React from 'react'
-import NavBtn from '../bttns/NavBtn'
-import icon from './../../styles/img/Vector.png';
+import React, { useState } from 'react'
+import {NavBtn} from '../NavBtn'
+import icon from './../../img/Vector.png';
+import styles from './Footer.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Nav } from '../Nav';
 
-
-const Footer = () => {
-
+export const Footer = () => {
+    const [collapse, setCollapse]=useState<boolean>(true)
       return (
-        <div className="footer">
-        <div className="footer__left left">
-            <div className="footer__logo">
+        <div className={styles.footer}>
+            <div className={styles.footer__logo}>
                 <img src={icon} alt="" />
-                <span className="footer__text">Tezos4all</span>
+                <span className={styles.footer__text}>Tezos4all</span>
             </div>
-            <div className="footer__columns" >
-                <div className="footer__column">
-                    <span className="footer__item">
+            <button className={styles.footer__burger}>
+            <FontAwesomeIcon onClick={()=>setCollapse(!collapse)} icon='bars' className={styles.footer__burgericon} />  
+            </button>
+            <div className={styles.footer__columns} >
+                <div className={styles.footer__column}>
+                    <span className={styles.footer__item}>
                         Our team
                     </span>
-                    <span className="footer__item">
+                    <span className={styles.footer__item}>
                         Testing skills
                     </span>
-                    <span className="footer__item">
+                    <span className={styles.footer__item}>
                         General description of the assignment
                     </span>
                 </div>
-                <div className="footer__column">
-                    <span className="footer__item">
+                <div className={styles.footer__column}>
+                    <span className={styles.footer__item}>
                         Carrier
                     </span>
-                    <span className="footer__item">
+                    <span className={styles.footer__item}>
                         About us
                     </span>
-                    <span className="footer__item">
+                    <span className={styles.footer__item}>
                         Blog
                     </span>
                 </div>
             </div>
-
-
-        </div>
-        <div className="footer__right">
-        <nav className="footer__btns">            
-                <NavBtn path='/home'  name='Home'/>
+               <Nav collapse={collapse}>
+               <NavBtn path='/home'  name='Home'/>
                 <NavBtn path='/login'   name='Login'/>
-            </nav> 
-        <span className="footer__copyright">(C)Copyright</span>
-        </div>
-
+               </Nav>     
+        <span className={styles.footer__copyright}>(C)Copyright</span>
     </div>
     )
 }
 
-export default Footer
+

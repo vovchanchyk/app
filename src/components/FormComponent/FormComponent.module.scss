@@ -1,0 +1,54 @@
+@import './../../styles/App.scss';
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
+    &__body {
+      width: 50%;
+      max-width: 450px;
+      background: #ecf4ff; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      padding: 30px 30px;
+      flex-direction: column;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      @include media(1100px){
+        width: 70%;  
+      }
+    }
+  
+    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+      width: 110px;
+      height: 55px;
+      font-weight: 600;
+      background-color: $orange;
+      color: white;
+      
+      &:hover {
+        background-color: transparent;
+        color: rgba(255, 191, 43, 1);
+        border: solid;
+        background-color: transparent;
+      }
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+  
+  .error {
+    color: white;
+    font-weight: 700;
+    font-size: 36px;
+  }
+

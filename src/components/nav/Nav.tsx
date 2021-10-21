@@ -1,12 +1,12 @@
 import React from 'react'
+import styles from './Nav.module.scss';
 
-const Nav:React.FC<{collapse:boolean}> = ({children, collapse}) => {
-    
+export const Nav:React.FC<{collapse:boolean}> = ({children, collapse}) => {
+    console.log(collapse)
     return (
-        <nav className={`header__nav ${collapse?'hide':''}`}>
+        <nav className={`${styles.nav} ${collapse?styles.hide:''}`}>
             {children}
         </nav>
     )
 }
 
-export default Nav

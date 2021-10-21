@@ -1,0 +1,160 @@
+@import './../../styles/App.scss';
+
+.skills {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+
+  @include media(768px) {
+    margin: 50px 0px;
+    padding: 50px 0;
+
+  }
+
+  &__title {
+    padding: 50px 0px;
+    font-size: 32px;
+    align-self: start;
+    padding-left: 50px;
+    font-weight: 500;
+    
+    @include media(768px) {
+      align-self: center;
+      padding-left: 0px;
+
+    }
+  }
+
+  &__body {
+    width: 1200px;
+    display: flex;
+
+    @include media(1100px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 460px;
+      justify-content: center;
+      padding: 0px 30px;
+      font-size: 16px;
+      width: 100%;
+
+    }
+
+    @include media(768px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 30px;
+      font-size: 16px;
+
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 500px;
+    justify-content: space-around;
+
+    @include media(1100px) {
+      width: 40%;
+      height: 220px;
+
+    }
+
+    @include media(768px) {
+      width: 70%;
+      height: 220px;
+      ;
+
+    }
+  }
+
+  &__item {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    padding: 20px;
+
+    @include media(1100px) {
+      padding: 5px;
+    }
+  }
+
+  &__icon {
+    box-sizing: border-box;
+    margin: 0 15px;
+    border: solid 0.3px;
+    color: blueviolet;
+    border-radius: 50%;
+    height: 35px;
+    min-width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__circle {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    height: 500px;
+
+    @include media(1100px) {
+      order: 2;
+      max-width: 400px;
+      max-height: 400px;
+
+    }
+
+    @include media(768px) {
+      font-size: 12px;
+      order: -1;
+      width: 300px;
+      height: 300px;
+
+    }
+  }
+
+  &__quatro1 {
+    @extend %quatro;
+    border-top-left-radius: 100%;
+  }
+
+  &__quatro2 {
+    @extend %quatro;
+    border-top-right-radius: 100%;
+  }
+
+  &__quatro3 {
+    @extend %quatro;
+    border-bottom-left-radius: 100%;
+  }
+
+  &__quatro4 {
+    @extend %quatro;
+    border-bottom-right-radius: 100%;
+  }
+
+  &__quatro-text {
+    display: flex;
+    height: auto;
+    padding-bottom: 15px;
+
+    @include media(1100px) {
+      display: flex;
+      height: auto;
+      padding-bottom: 15px;
+    }
+  }
+}

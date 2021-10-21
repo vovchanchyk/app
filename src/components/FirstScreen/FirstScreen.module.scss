@@ -1,0 +1,40 @@
+@import './../../styles/App.scss';
+
+.firstscreen {
+  height: 600px;
+  min-width: 350px;
+  background-color: $orange;
+
+  @include media(1100px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    height: calc(100% - 10px);
+    background-color: rgba(44, 125, 247, 0.67);
+    border-bottom-right-radius: 100% 40px;
+    border-bottom-left-radius: 100% 40px;
+  }
+
+  &__cover {
+    height: 100%;
+    background-color: rgba(44, 125, 247, 0.67);
+    border-bottom-right-radius: 100% 30px;
+    border-bottom-left-radius: 100% 30px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 180px;
+
+    @include media(1100px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

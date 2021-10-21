@@ -1,0 +1,43 @@
+@import './../../styles/App.scss';
+
+.table {
+  padding: 20px 20px;
+  height: auto;
+  width: 630px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  @include media(768px) {
+    width: 80%;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      height: 7px;
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: blueviolet;
+      outline: 8px solid slategrey;
+    }
+  }
+
+  &__head {
+    display: flex;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__cell {
+    width: calc(100% / 6);
+    min-height: 3em;
+    width: 100px;
+    word-wrap: break-word;
+    margin: 10px;
+    font-weight: 500;
+  }
+}
+

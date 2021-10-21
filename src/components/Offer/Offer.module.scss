@@ -1,0 +1,48 @@
+@import './../../styles/App.scss';
+
+.offer {
+  color: white;
+  padding-right: 50px;
+  width: 350px;
+
+  @include media(1100px) {
+    color: white;
+    padding: 0;
+    width: 450px;
+    margin-bottom: 20px;
+
+  }
+
+  &__brand {
+    width: 350px;
+
+    @include media(1100px) {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    padding: 30px 0px;
+
+    @include media(1100px) {
+      margin: auto;
+      font-size: 42px;
+      text-align: center;
+
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 32px;
+
+    @include media(1100px) {
+      font-size: 20px;
+      line-height: 32px;
+      text-align: center;
+
+    }
+  }
+}
+

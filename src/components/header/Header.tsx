@@ -1,24 +1,24 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
-import NavBtn from '../bttns/NavBtn'
-import Nav from '../nav/Nav'
-import logo from './../../styles/img/Vector.png';
+import {NavBtn} from '../NavBtn'
+import {Nav} from '../Nav'
+import logo from './../../img/Vector.png';
+import styles from './Header.module.scss';
 
-
-const Header = () => {
+export const Header = () => {
 
 const [collapse, setCollapse]=useState<boolean>(true)
 
     return (
-        <div className="header">
-            <div className="header__brand">
-                <img className="header__logo" src={logo} alt="" />
-                <div className="header__logo-txt">
+        <div className={styles.header}>
+            <div className={styles.header__brand}>
+                <img className={styles.header__logo} src={logo} alt="" />
+                <div className={styles.header__logotxt}>
                 Tezos4all
                 </div>
             </div>
-            <button className="header__burger">
-            <FontAwesomeIcon onClick={()=>setCollapse(!collapse)} icon='bars' className="header__burger-icon" />  
+            <button className={styles.header__burger}>
+            <FontAwesomeIcon onClick={()=>setCollapse(!collapse)} icon='bars' className={styles.header__burgericon} />  
             </button>
             <Nav collapse={collapse}>
                 <NavBtn name='Home' path='/home'/>
@@ -29,4 +29,4 @@ const [collapse, setCollapse]=useState<boolean>(true)
     )
 }
 
-export default Header
+

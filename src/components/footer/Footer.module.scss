@@ -1,0 +1,88 @@
+@import './../../styles/App.scss';
+
+.footer {
+  background-color: rgba(43, 125, 247, 1);
+  padding-bottom: 129px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 15px;
+
+  nav {
+    @include media(768px) {
+      grid-column: 1/3;
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: white;
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    @include media(768px) {
+      height: 100%;
+    }
+  }
+
+  &__burger {
+    background-color: transparent;
+
+    @include media(769px, min) {
+      display: none;
+    }
+  }
+
+  &__burgericon {
+    color: $orange;
+    font-size: 28px;
+    min-width: 30px;
+    min-height: 30px;
+  }
+
+
+  &__columns {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+    @include media(768px) {
+      grid-row: 3/4;
+      flex-direction: column;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+
+
+  }
+
+  &__item {
+    margin: 5px 0px;
+    color: white;
+    line-height: 22px;
+  }
+
+  &__copyright {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    @include media(768px) {
+      grid-row: 3/4;
+    }
+
+  }
+
+  &__text {
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,91 @@
+@import './../../styles/App.scss';
+
+.header {
+  padding: 10px 180px;
+  background-color: $blue;
+  display: flex;
+  justify-content: space-between;
+  min-height: 55px;
+
+  @include media(768px) {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 40px;
+  }
+
+  &__brand {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 55px;
+  }
+
+  &__logo {
+    max-height: 35px;
+
+    @include media(768px) {
+      width: 50%;
+    }
+  }
+
+  &__logotxt {
+    color: white;
+    margin-left: 5px;
+  }
+
+  &__burger {
+    display: none;
+    background-color: transparent;
+
+    @include media(768px) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 50%;
+    }
+  }
+
+  &__nav {
+    display: flex;
+
+    @include media(768px) {
+      width: 100%;
+      margin: 15px;
+      align-items: center;
+      padding: 10px;
+      flex-direction: column;
+      justify-content: space-between;
+
+    }
+  }
+
+  &__logo-txt {
+    color: white;
+    margin-left: 5px;
+  }
+
+  &__burger {
+    display: none;
+    background-color: transparent;
+
+    @include media(768px) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 50%;
+
+    }
+  }
+
+  &__burgericon {
+    @include media(768px) {
+      color: $orange;
+      font-size: 28px;
+      min-width: 30px;
+      min-height: 30px;
+    }
+  }
+}
+
+
+

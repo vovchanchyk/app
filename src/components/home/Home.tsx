@@ -1,12 +1,12 @@
-import React from 'react'
-import Offer from '../blocks/offer/Offer'
-import Result from '../table/Result'
-import Team from '../blocks/team/Team'
-import FirstScreen from '../blocks/FirstScreen'
-import Description from '../blocks/description/Description'
-import Skills from '../blocks/Skills'
+import React from 'react';
+import {Offer} from '../Offer';
+import {Result} from '../Result';
+import {Team} from '../Team';
+import {FirstScreen} from '../FirstScreen';
+import {Description} from '../Description';
+import {Skills} from '../Skills';
 
-const Home = () => {
+export const Home = () => {
     return (
         <div className='home'>
             <FirstScreen>
@@ -20,4 +20,4 @@ const Home = () => {
     )
 }
 
-export default Home
+

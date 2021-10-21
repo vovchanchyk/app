@@ -1,14 +1,13 @@
 import React from 'react'
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
     Redirect
 } from "react-router-dom";
-import Home from '../home/Home';
-import Login from '../Login/Login';
+import {Home} from '../Home';
+import {Login} from '../Login';
 
-const Main = () => {
+export const Main = () => {
     return (
         <div className="main">
             <Switch>
@@ -16,12 +15,10 @@ const Main = () => {
                 <Redirect to="/home" />
             </Route>
             <Route exact path='/home' component={Home}/>
-            <Route exact path='/login' component={Login}/>
-            
+            <Route exact path='/login' component={Login}/>        
             </Switch>
             
         </div>
     )
 }
 
-export default Main

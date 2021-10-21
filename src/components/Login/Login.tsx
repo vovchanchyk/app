@@ -1,17 +1,16 @@
 import React from 'react';
-import FirstScreen from '../blocks/FirstScreen';
-import FormComponent from '../form/FormComponent';
+import {FirstScreen} from '../FirstScreen';
+import {FormComponent} from '../FormComponent';
 
 
-const Login = () => {
+export const Login = () => {
     return (
         <div>
             <FirstScreen>
             <FormComponent/>
-            </FirstScreen>
-            
+            </FirstScreen>    
         </div>
     )
 }
 
-export default Login
+

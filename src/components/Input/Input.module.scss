@@ -1,0 +1,51 @@
+.row {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.field {
+    height: 60px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.input {
+    margin: 5px;
+    width: 95%;
+    background: white;
+
+}
+
+.border_red {
+    border: solid 2px red;
+
+}
+
+.green {
+    border: solid 0.3px green;
+}
+
+.plaseholder_active {
+    position: absolute;
+    padding: 0 10px;
+    left: 5px;
+    top: -13px;
+    z-index: 2;
+    background-color: blanchedalmond;
+    background-color: transparent;
+    background: linear-gradient(0deg, white 50%, #ecf4ff 50%);
+}
+
+.show {
+    display: block;
+}
+
+.none {
+    display: none;
+}
